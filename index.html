@@ -5,8 +5,102 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./scss/main.css">
+    <script src="./js/index.js" defer></script>
   </head>
   <body>
+
+    <header class="header">
+      <div class="contacts">
+        <i class="fab fa-facebook-f"> </i>
+        <i class="fab fa-twitter"> </i>
+        <div class="phone">
+          <img src="./img/phone.svg" alt="" />
+          <p class="number">020-800-456-747</p>
+        </div>
+      </div>
+      <p>Free in-store delivery</p>
+      <div class="actions">
+        <div class="dropdown">
+          <label for="lang-dropdown">
+            <p>English</p>
+          </label>
+          <input id="lang-dropdown" type="checkbox" />
+          <ul class="menu">
+            <li>German</li>
+            <li>French</li>
+          </ul>
+        </div>
+
+        <span class="horizontal-line"></span>
+
+        <div class="dropdown">
+          <label for="currency-dropdown">
+            <p>USD</p>
+          </label>
+          <input id="currency-dropdown" type="checkbox" />
+          <ul class="menu">
+            <li>EUR</li>
+            <li>GBP</li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <nav>
+      <div class="left">
+        <h1 class="title">Varkala</h1>
+        <div class="dropdown">
+          <button>Home</button>
+          <ul class="menu">
+            <li>Home 1 - Fashion</li>
+            <li>Home 2 - Fashion</li>
+            <li>Home 3 - Design</li>
+            <li>Home 4 - Design</li>
+          </ul>
+        </div>
+      </div>
+      <div class="right">
+        <form action="">
+          <input type="search" />
+          <img src="" alt="" />
+        </form>
+        <div class="actions">
+          <div class="profile">
+            <img src="" alt="" />
+          </div>
+          <div class="wishlist">
+            <img src="" alt="" />
+            <p class="number"></p>
+          </div>
+          <div class="checkout">
+            <img src="" alt="" />
+            <p class="number"></p>
+          </div>
+          <div class="about">
+            <img src="" alt="" />
+          </div>
+        </div>
+      </div>
+    </nav>
+
+
+    <section class="index-intro">
+      <div class="container">
+        <div class="box">
+          <div class="left">
+            <p class="subtitle"> Our All Time Favourites </p>
+            <h3 class="title"> Black & White </h3>
+            <p class="text"> The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pit </p>
+            <button> Discover More </button>
+          </div>
+          <div class="right">
+            <img class="chair" src="./img/index-intro-chair.png" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="deal">
       <div class="container">
         <h3 class="sbutitle">DEAL OF THE WEEK</h3>
@@ -23,46 +117,49 @@
     <section class="new">
       <div class="container">
         <h3 class="title">New Arrival</h3>
-        <p class="subitle">
+        <p class="text">
           One morning, when Gregor Samsa woke from troubled dreams, he found
           himself transformed in his bed into a horrible vermin. He lay on his
           armour-like back, and if he lifted his head a little he could see his
           brown belly, slightly domed and divided by arches into stiff sections
         </p>
-        <div class="filter">
-          <div>
-            <p>All Products</p>
+        <div class="filters">
+          <div class="left">
+            <p class="active">All Products</p>
             <p>Chairs</p>
             <p>Books</p>
             <p>Clothes</p>
             <p>Accessories</p>
           </div>
-          <p>All Produts</p>
+          <p class="right">All Produts</p>
         </div>
-        <div class="box"></div>
+        <div class="box">
+          
+        </div>
       </div>
     </section>
 
     <section class="summer">
       <div class="container">
         <h3 class="title">Summer Sales</h3>
-        <p class="text">Our biggest sales this year — up to 60% off!</p>
+        <p class="subtitle">Our biggest sales this year — up to 60% off!</p>
         <button>Start Shopping</button>
+        <img src="./img/index-summer-chair.png" alt="">
       </div>
     </section>
 
     <footer>
-      <div class="container">
-        <div class="box-1">
+      <div class="box-1">
+        <div class="container">
           <div class="item">
-            <img src="" alt="" />
+            <img src="./img/footer-delivery.svg" alt="" />
             <div>
               <h3 class="title">Free shipping & return</h3>
               <p class="subtitle">Free Shipping over $300</p>
             </div>
           </div>
           <div class="item">
-            <img src="" alt="" />
+            <img src="./img/footer-money.svg" alt="" />
             <div>
               <h3 class="title">Money back guarantee</h3>
               <p class="subtitle">30 Days Money Back Guarantee</p>
@@ -70,7 +167,7 @@
           </div>
 
           <div class="item">
-            <img src="" alt="" />
+            <img src="./img/footer-price.svg" alt="" />
             <div>
               <h3 class="title">Best prices</h3>
               <p class="subtitle">Always the best prices</p>
@@ -78,65 +175,66 @@
           </div>
 
           <div class="item">
-            <img src="" alt="" />
+            <img src="./img/footer-customer.svg" alt="" />
             <div>
               <h3 class="title">020-800-456-747</h3>
               <p class="subtitle">24/7 Available Support</p>
             </div>
           </div>
         </div>
-        <div class="box-2">
-          <div class="contact">
-            <h3 class="title">Be in Touch</h3>
-            <p class="subtitle">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. At
-              itaque temporibus.
-            </p>
-            <form action="">
-              <input type="text" placeholder="Your Email address" />
-              <img src="" class="email" alt="" />
-            </form>
-          </div>
-          <div class="shop">
-            <h4 class="title">Shop</h4>
-            <ul>
-              <li><a href=""> For Women </a></li>
-              <li><a href=""> For Men </a></li>
-              <li><a href=""> Stores </a></li>
-              <li><a href=""> Our Blog </a></li>
-              <li><a href=""> Shop </a></li>
-            </ul>
-          </div>
-          <div class="company">
-            <h4 class="title">Company</h4>
-            <ul>
-              <li>Login</li>
-              <li>Register</li>
-              <li>Wishlist</li>
-              <li>Our Products</li>
-              <li>Checkouts</li>
-            </ul>
-          </div>
-          <div class="account">
-            <h4 class="title">Your Account</h4>
-            <ul>
-              <li>Login</li>
-              <li>Register</li>
-              <li>Wishlist</li>
-              <li>Our Products</li>
-              <li>Checkouts</li>
-            </ul>
-          </div>
+      </div>
+
+      <div class="box-2 container">
+        <div class="contact">
+          <h3 class="title">Be in Touch</h3>
+          <p class="subtitle">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. At itaque
+            temporibus.
+          </p>
+          <form action="">
+            <input type="text" placeholder="Your Email address" />
+          </form>
         </div>
-        <div class="box-3">
-          <p class="copyright">© 2020 Your company. All rights reserved.</p>
+        <div class="shop links">
+          <h4 class="title">Shop</h4>
           <ul>
-            <li><a href=""> Terms & Conditions </a></li>
-            <li><a href=""> Privacy & cookies </a></li>
-            <li><a href=""> Accessibility </a></li>
-            <li><a href=""> Customer Data Promise </a></li>
+            <li><a href=""> For Women </a></li>
+            <li><a href=""> For Men </a></li>
+            <li><a href=""> Stores </a></li>
+            <li><a href=""> Our Blog </a></li>
+            <li><a href=""> Shop </a></li>
           </ul>
         </div>
+        <div class="company links">
+          <h4 class="title">Company</h4>
+          <ul>
+            <li>Login</li>
+            <li>Register</li>
+            <li>Wishlist</li>
+            <li>Our Products</li>
+            <li>Checkouts</li>
+          </ul>
+        </div>
+        <div class="account links">
+          <h4 class="title">Your Account</h4>
+          <ul>
+            <li>Login</li>
+            <li>Register</li>
+            <li>Wishlist</li>
+            <li>Our Products</li>
+            <li>Checkouts</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="box-3 container">
+        <p class="copyright">© 2020 Your company. All rights reserved.</p>
+        <ul>
+          <li><a href=""> Terms & Conditions </a></li>
+          <li><a href=""> Privacy & cookies </a></li>
+          <li><a href=""> Accessibility </a></li>
+          <li><a href=""> Customer Data Promise </a></li>
+        </ul>
       </div>
     </footer>
   </body>

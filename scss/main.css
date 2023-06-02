@@ -59,6 +59,7 @@ html {
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   left: 0;
+  top: 30px;
 }
 .dropdown .menu li {
   padding: 10px 20px;
@@ -132,6 +133,147 @@ html {
 }
 .about-timeline .box-2 .img-wrap {
   order: 2;
+}
+
+section.new .title {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+section.new .text {
+  font-size: 20px;
+  margin-bottom: 48px;
+  color: #868e96;
+}
+section.new .filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+section.new .filters .left {
+  color: #868e96;
+  display: flex;
+  gap: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+section.new .filters .left p:hover {
+  color: #212219;
+  text-decoration: underline;
+}
+section.new .filters .left .active {
+  color: #212219;
+}
+section.new .filters .right {
+  color: #bcac76;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+section.new .box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+section.new .item .top {
+  position: relative;
+}
+section.new .item .top > img {
+  width: 100%;
+}
+section.new .item .top .extra {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #fff;
+  display: none;
+}
+section.new .item .top .extra img {
+  width: 32px;
+}
+section.new .item:hover .top .extra {
+  background-color: black;
+  bottom: 0;
+}
+
+section.summer {
+  padding: 30px 0;
+}
+section.summer .container {
+  padding: 60px 0;
+  background-color: #eae0bd;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section.summer .title {
+  font-size: 72px;
+  margin-bottom: 16px;
+}
+section.summer .subtitle {
+  font-size: 32px;
+  margin-bottom: 48px;
+}
+section.summer button {
+  border: 1px solid #212529;
+  color: #212529;
+  font-weight: light;
+  font-size: 18px;
+  padding: 15px 25px;
+  border: 1px solid #212529;
+}
+section.summer button:hover {
+  background-color: #212529;
+  color: #fff;
+}
+section.summer img {
+  position: absolute;
+  top: -100px;
+  right: 0;
+  width: 200px;
+}
+
+section.index-intro {
+  color: #212219;
+}
+section.index-intro .subtitle {
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+section.index-intro .title {
+  font-size: 64px;
+  margin-bottom: 24px;
+}
+section.index-intro .text {
+  color: #868e96;
+  margin-bottom: 48px;
+  letter-spacing: 1px;
+}
+section.index-intro .box {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  align-items: center;
+  gap: 60px;
+}
+section.index-intro .chair {
+  height: 400px;
+}
+section.index-intro button {
+  background-color: transparent;
+  border: 1px solid #bcac76;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  font-weight: bold;
+  background-color: transparent;
+  color: #bcac76;
+}
+section.index-intro button:hover {
+  background-color: #bcac76;
+  color: #212219;
 }
 
 footer .box-1 {
