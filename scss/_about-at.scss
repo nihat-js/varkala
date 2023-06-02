@@ -1,0 +1,16 @@
+section.about-at {
+  padding: 60px 0;
+  .title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 60px;
+  }
+  article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap : 40px  ;
+    p {
+      color: $gray;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+section.about-sponsors{
+    padding: 60px 0 ;
+    background-color: #f8f9fa;
+
+    .logos{
+
+        display: flex;
+        justify-content: space-between;
+    }
+    img{
+        width: 100px;
+    }
+}
