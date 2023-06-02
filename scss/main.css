@@ -230,6 +230,19 @@ footer .box-3 a:hover {
   text-decoration: underline;
 }
 
+@media screen and (max-width: 768px) {
+  footer .box-1 .container {
+    grid-template-columns: 1fr;
+  }
+  footer .box-2 {
+    flex-direction: column;
+  }
+  footer .box-3 {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
 section.about-at {
   padding: 60px 0;
 }
@@ -257,4 +270,110 @@ section.about-sponsors .logos {
 }
 section.about-sponsors img {
   width: 100px;
+}
+
+section.about-team {
+  padding: 50px 0;
+}
+section.about-team .line {
+  width: 100%;
+  height: 2px;
+  background-color: #868e96;
+  margin-top: 15px;
+}
+section.about-team .container {
+  display: grid;
+  grid-template-columns: 2fr 10fr;
+  gap: 50px;
+}
+section.about-team .box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+}
+section.about-team img {
+  width: 100%;
+  border-radius: 50%;
+}
+section.about-team .name {
+  margin-bottom: 4px;
+  text-align: center;
+}
+section.about-team .position {
+  color: #868e96;
+  font-size: 14px;
+  text-align: center;
+}
+section.about-team .subtitle {
+  color: #bcac76;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+section.about-team .title {
+  font-size: 70px;
+  margin-bottom: 16px;
+}
+section.about-team .text {
+  color: #868e96;
+  margin-bottom: 40px;
+}
+
+section.blog-intro {
+  background-image: url("../img/blog-intro.jpg");
+  height: 600px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+section.blog-intro .title {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+section.blog-intro .text {
+  max-width: 1000px;
+  text-align: center;
+}
+
+section.blog-blogs {
+  padding: 60px 0;
+}
+section.blog-blogs .box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 60px;
+}
+section.blog-blogs img {
+  width: 100%;
+}
+section.blog-blogs .title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+section.blog-blogs .title:hover {
+  text-decoration: underline;
+}
+section.blog-blogs .info {
+  display: flex;
+  gap: 20px;
+}
+section.blog-blogs .tag {
+  color: #bcac76;
+  font-size: 14px;
+}
+section.blog-blogs .date {
+  color: #868e96;
+  font-size: 14px;
+}
+section.blog-blogs .box-2 {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+section.blog-blogs .box-2 > p {
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */

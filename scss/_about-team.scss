@@ -1,0 +1,47 @@
+section.about-team{
+    padding: 50px 0;
+    .line {
+        width: 100%;
+        height: 2px;
+        background-color :$gray;
+        margin-top: 15px;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: 2fr 10fr;
+        gap : 50px;
+    }
+    .box{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap :50px;
+    }
+    img {
+        width: 100%;
+        border-radius: 50%;
+    }
+    .name {
+        margin-bottom: 4px;
+        text-align: center;
+    }
+    .position {
+        color : $gray;
+        font-size: 14px;
+        text-align: center;
+    }
+    .subtitle{
+        color : #bcac76;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+    }
+    .title{
+        font-size: 70px;
+        margin-bottom: 16px;
+
+    }
+    .text{
+        color  : $gray;
+        margin-bottom: 40px;
+    }
+}
