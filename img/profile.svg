@@ -1,0 +1,8 @@
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="svg-icon navbar-icon" width="64"  height="64" ><defs><symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="avatar-1">
+    <title>Avatar</title>
+    <desc>A line styled icon from Orion Icon Library.</desc>
+    <path data-name="layer2" d="M24 40.8V44c0 2-1 5.2-11 7A13.4 13.4 0 0 0 2 62h60a15.5 15.5 0 0 0-12-11c-10-1.9-10-5-10-7v-3.2" fill="none" stroke="#202020" stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" style=""></path>
+    <path data-name="layer1" d="M46 25.6c0 10-6.3 18.4-14 18.4s-14-8-14-18v-9.6C18 6 25.4 2 32 2s14 3.6 14 14z" fill="none" stroke="#202020" stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" style=""></path>
+  </symbol></defs>
+                <use xlink:href="#avatar-1" stroke="#212529" stroke-width="3px"> </use>
+              </svg>

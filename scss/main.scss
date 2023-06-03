@@ -31,35 +31,7 @@ html {
   }
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  background-color: #e9ecef;
-  padding: 12px 50px;
-  .contacts {
-    display: flex;
-    i {
-      margin-right: 10px;
-    }
-    .phone {
-      margin-left: 20px;
-      display: flex;
-      img {
-        width: 32px;
-      }
-    }
-  }
-  .actions {
-    display: flex;
-    gap: 10px;
-    span.horizontal-line {
-      display: block;
-      width: 1px;
-      height: 24px;
-      background-color: #868e96;
-    }
-  }
-}
+
 
 .dropdown {
   position: relative;
@@ -100,144 +72,29 @@ html {
   }
 }
 
-.about-us-intro {
-  .box {
-    padding: 60px 0;
-    display: flex;
-    gap: 50px;
-    .left {
-      width: 100/12 * 2%;
-      .line {
-        width: 100%;
-        background-color: #212529;
-        height: 1px;
-        margin-top: 16px;
-      }
-    }
-    .right {
-      width: 50%;
-      .subtitle {
-        color: #bcac76;
-        margin-bottom: 20px;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-      }
-      .title {
-        font-size: 68px;
-        margin-bottom: 40px;
-      }
-      .text {
-        color: $gray;
-        font-weight: bold;
-        letter-spacing: 1.2px;
-        font-size: 20px;
-      }
-    }
-  }
-}
 
-.about-timeline {
-  .box {
-    padding: 30px 0;
-    display: flex;
-    align-items: center;
-    gap: 60px;
-    img {
-      width: 100%;
-    }
-    .subtitle {
-      color: $gray;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-bottom: 8px;
-    }
-    .title {
-      font-size: 32px;
-      margin-bottom: 30px;
-    }
-    .text {
-      color: $gray;
-      font-size: 16px;
-      font-weight: bold;
-    }
-  }
-  .box-2 {
-    .img-wrap {
-      order: 2;
-    }
-  }
-}
 
 @import "./components/header";
 @import "./components/nav";
 @import "./components/footer";
+@import "./components/basket-modal";
 
 @import "./pages//index/index-intro";
 @import "./pages/index/index-deal";
 @import "./pages/index/index-new";
 @import "./pages/index/index-summer";
 
-// @import "./footer";
-// @import "./about-at";
-// @import "./about-sponsors";
-// @import "./about-team";
 
-section.blog-intro {
-  background-image: url("../img/blog-intro.jpg");
-  height: 600px;
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  .title {
-    font-size: 50px;
-    margin-bottom: 10px;
-  }
-  .subtitle {
-  }
-  .text {
-    max-width: 1000px;
-    text-align: center;
-  }
-}
-section.blog-blogs {
-  padding: 60px 0;
-  .box {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 60px;
-  }
-  img {
-    width: 100%;
-  }
-  .title {
-    font-size: 20px;
-    margin-bottom: 10px;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-  .info {
-    display: flex;
-    gap: 20px;
-  }
-  .tag {
-    color: #bcac76;
-    font-size: 14px;
-  }
-  .date {
-    color: $gray;
-    font-size: 14px;
-  }
-  .box-2 {
-    margin-top: 30px;
-    display: flex;
-    justify-content: space-between;
-    & > p {
-      cursor: pointer;
-    }
-  }
-}
+@import "./pages/about/about-intro";
+@import "./pages/about/about-timeline";
+@import "./pages/about/about-at";
+@import "./pages/about/about-sponsors";
+@import "./pages/about/about-team";
+
+@import "./pages/blog/blog-intro";
+@import "./pages/blog/blog-blogs";
+
+
+
+
+

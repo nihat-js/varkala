@@ -1,0 +1,21 @@
+section.blog-intro {
+    background-image: url("../img/blog-intro.jpg");
+    height: 600px;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .title {
+      font-size: 50px;
+      margin-bottom: 10px;
+    }
+    .subtitle {
+    }
+    .text {
+      max-width: 1000px;
+      text-align: center;
+    }
+  }

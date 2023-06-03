@@ -1,0 +1,41 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #e9ecef;
+    padding: 12px 50px;
+    .contacts {
+      display: flex;
+      i {
+        margin-right: 10px;
+      }
+      .phone {
+        margin-left: 20px;
+        display: flex;
+        img {
+          width: 32px;
+        }
+      }
+    }
+    .actions {
+      display: flex;
+      gap: 10px;
+      span.horizontal-line {
+        display: block;
+        width: 1px;
+        height: 24px;
+        background-color: #868e96;
+      }
+    }
+  }
+
+@media screen and (max-width:768px) {
+    .header{
+        padding: 10px 8px;
+        .contacts{
+            display: none;
+        }
+        .actions {
+            display: none;
+        }
+    }
+}

@@ -52,38 +52,75 @@
       </div>
     </header>
 
+    <section class="basket-modal">
+      <div class="top">
+        <img src="./img/close.svg" alt="" onclick="hideBasket()" />
+      </div>
+      <div class="body"></div>
+      <div class="footer">
+        <div class="total">
+          <h3 class="text"> Subtotal :  </h3>
+          <p class="number">  </p>
+        </div>
+        <button> View Cart </button>
+        <button> Checkout </button>
+      </div>
+    </section>
+
     <nav>
       <div class="left">
         <h1 class="title">Varkala</h1>
         <div class="dropdown">
-          <button>Home</button>
+          <label for="dropdown-home">
+            <p>Home</p>
+            <img src="./img/arrow-down.svg" alt="" width="24px" />
+          </label>
+          <input id="dropdown-home" type="checkbox" />
           <ul class="menu">
-            <li>Home 1 - Fashion</li>
-            <li>Home 2 - Fashion</li>
-            <li>Home 3 - Design</li>
-            <li>Home 4 - Design</li>
+            <li><a href="index.html"> Home </a></li>
+            <li><a href="blog.html"> Blog </a></li>
+            <li><a href="contact.html"> Contact </a></li>
+            <li><a href="about.html"> About </a></li>
           </ul>
         </div>
+
+        <label>
+          <p>Shop</p>
+          <img src="./img/arrow-down.svg" alt="" width="24px" />
+        </label>
+        <label>
+          <p>Icons</p>
+          <img src="./img/arrow-down.svg" alt="" width="24px" />
+        </label>
+        <label>
+          <p>Pages</p>
+          <img src="./img/arrow-down.svg" alt="" width="24px" />
+        </label>
+
+        <label>
+          <p>Docs</p>
+          <img src="./img/arrow-down.svg" alt="" width="24px" />
+        </label>
       </div>
+
       <div class="right">
         <form action="">
-          <input type="search" />
-          <img src="" alt="" />
+          <input type="search" placeholder="Search" />
         </form>
         <div class="actions">
           <div class="profile">
-            <img src="" alt="" />
+            <img src="./img/profile.svg" alt="" />
           </div>
           <div class="wishlist">
-            <img src="" alt="" />
+            <img src="./img/heart.svg" alt="" />
             <p class="number"></p>
           </div>
-          <div class="checkout">
-            <img src="" alt="" />
+          <div class="basket">
+            <img src="./img/basket.svg" alt="" onclick="showBasket()" />
             <p class="number"></p>
           </div>
           <div class="about">
-            <img src="" alt="" />
+            <img src="./img/hamburger.svg" alt="" />
           </div>
         </div>
       </div>

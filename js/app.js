@@ -1,26 +1,5 @@
-let basket = [
-  //   {
-  //     id: 1,
-  //     title: "Norwegg Chair",
-  //     price: "$40.00",
-  //     img: "./img/index-new-1.jpg",
-  //     rating: "3",
-  //   },
-  //   {
-  //     id: 4,
-  //     title: "Norwegg Chair",
-  //     price: "$40.00",
-  //     img: "./img/index-new-2.jpg",
-  //     rating: "3",
-  //   },
-  //   {
-  //     id: 5,
-  //     title: "Norwegg Chair",
-  //     price: "$40.00",
-  //     img: "./img/index-new-3.jpg",
-  //     rating: "3",
-  //   },
-];
+let basket = [];
+
 function loadBasket() {
   if ( JSON.parse(localStorage.getItem("basket")) !== null) {
     basket = JSON.parse(localStorage.getItem("basket"));
@@ -42,25 +21,86 @@ function updateBasket(item, count) {
     }
   }
 
+  showBasket()
   saveBasketToStorage()
 
-  //   basket.forEach((b) => {
-  //     if (b.id === item.id) {
-  //       b.count += count;
-  //       if (b.count <= 0) {
-  //         isCountEqualToZero = true;
-  //       }
-  //     }
-  //   });
 
-  //   if (isCountEqualToZero) {
-  //     basket = basket.filter((b) => b.id !== item.id);
-  //   }
+}
 
+function removeFromBasket(item){
+  console.log("Removing")
+  basket =basket.filter(x => x.id !== item.id )
+  showBasket()
+  saveBasketToStorage()
 }
 
 function saveBasketToStorage() {
   localStorage.setItem("basket", JSON.stringify(basket));
 }
+
+function showBasket(){
+  document.querySelector(".basket-modal").style.display = "block"
+  document.querySelector(".basket-modal .body").innerHTML = ""
+  
+  basket.forEach(b => {
+
+    let itemDiv = document.createElement("div")
+    let leftDiv = document.createElement("div")
+    let middleDiv = document.createElement("div")
+    let rightDiv = document.createElement("div")
+    let mainImg = document.createElement("img")
+    let title = document.createElement('h3')
+    let quantity = document.createElement('p')
+    let price = document.createElement('p')
+    let removeFromImg = document.createElement('img')
+
+    itemDiv.classList.add("item")
+    leftDiv.classList.add("left")
+    middleDiv.classList.add("middle")
+    rightDiv.classList.add("right")
+
+    removeFromImg.src = "./img/close.svg"
+    removeFromImg.onclick = () =>  removeFromBasket(b)
+
+    mainImg.src = b.img
+    title.innerText = b.title
+    quantity.innerText = "Quantity : " + b.count;
+    price.innerText = "Price : " +  (b.price * b.count)
+
+    leftDiv.append(mainImg)
+    middleDiv.append(title,quantity,price)
+    rightDiv.append(removeFromImg)
+
+    itemDiv.append(leftDiv,middleDiv,rightDiv)
+    
+    // let html = `
+    //   <div class='item'>
+    //     <div class="left">
+    //     <img src="${b.img}" />
+    //     </div>
+    //     <div class="middle">
+    //       <h3 class="title">${b.title}</h3>
+    //       <p class="quantity"> Quantity :   ${b.count} </p>
+    //       <p class="general-price"> ${b.count} * ${b.price} </p>
+    //     </div>
+    //     <div class="right">
+    //       <img src="./img/close.svg" onclick=${showBasket('id')}  /> 
+    //     </div>
+    //   </div>
+    // `
+    document.querySelector('.basket-modal .body').append(itemDiv) 
+    
+  })
+
+  let total = basket.reduce((a,b) => a + b.count * b.price , 0 )
+
+  document.querySelector(".basket-modal .total .number").innerText = total + " $"
+
+}
+
+function hideBasket(){
+  document.querySelector('.basket-modal').style.display = "none"
+}
+
 
 loadBasket();

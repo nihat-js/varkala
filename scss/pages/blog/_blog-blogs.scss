@@ -1,0 +1,39 @@
+section.blog-blogs {
+    padding: 60px 0;
+    .box {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 60px;
+    }
+    img {
+      width: 100%;
+    }
+    .title {
+      font-size: 20px;
+      margin-bottom: 10px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .info {
+      display: flex;
+      gap: 20px;
+    }
+    .tag {
+      color: #bcac76;
+      font-size: 14px;
+    }
+    .date {
+      color: $gray;
+      font-size: 14px;
+    }
+    .box-2 {
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      & > p {
+        cursor: pointer;
+      }
+    }
+  }
+  

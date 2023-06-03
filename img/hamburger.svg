@@ -1,0 +1,8 @@
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="svg-icon navbar-icon" width="64"  height="64" ><defs><symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="menu-hamburger-1">
+    <title>Menu Hamburger</title>
+    <desc>A line styled icon from Orion Icon Library.</desc>
+    <path data-name="layer2" fill="none" stroke="#202020" stroke-miterlimit="10" d="M2 14h60M2 32h36" stroke-linejoin="round" stroke-linecap="round" style=""></path>
+    <path data-name="layer1" fill="none" stroke="#202020" stroke-miterlimit="10" d="M2 50h60" stroke-linejoin="round" stroke-linecap="round" style=""></path>
+  </symbol></defs>
+            <use xlink:href="#menu-hamburger-1" stroke="#212529" stroke-width="3px"> </use>
+          </svg>

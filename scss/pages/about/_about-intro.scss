@@ -1,0 +1,36 @@
+.about-us-intro {
+    .box {
+      padding: 60px 0;
+      display: flex;
+      gap: 50px;
+      .left {
+        width: 100/12 * 2%;
+        .line {
+          width: 100%;
+          background-color: #212529;
+          height: 1px;
+          margin-top: 16px;
+        }
+      }
+      .right {
+        width: 50%;
+        .subtitle {
+          color: #bcac76;
+          margin-bottom: 20px;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+        }
+        .title {
+          font-size: 68px;
+          margin-bottom: 40px;
+        }
+        .text {
+          color: $gray;
+          font-weight: bold;
+          letter-spacing: 1.2px;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  
