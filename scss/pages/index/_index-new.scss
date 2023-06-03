@@ -15,56 +15,99 @@ section.new {
     .left {
       color: $gray;
       display: flex;
-      gap : 20px;
+      gap: 20px;
       font-weight: bold;
       cursor: pointer;
-      p:hover{
-          color : #212219;
-          text-decoration: underline;
+      p:hover {
+        color: #212219;
+        text-decoration: underline;
       }
       .active {
         color: #212219;
       }
     }
-    .right{
-        color : #bcac76;
-        font-weight: bold;
-        letter-spacing: 1px;
-      }
+    .right {
+      color: #bcac76;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
   }
 
   .box {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap : 30px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
   }
   .item {
     .top {
-        position: relative;
-        & > img{
-            width: 100%;
+      position: relative;
+      & > img {
+        width: 100%;
+      }
+      .extra {
+        position: absolute;
+        left: 0;
+        bottom: -1000%;
+        bottom: 0;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #fcfffc;
+        display: none;
+        img {
+          width: 16px;
+          margin-left: 12px;
+          cursor: pointer;
+          &:hover {
+            transform: scale(1.2);
+          }
         }
-        .extra {
-            position: absolute;
-            left :0;
-            // bottom: -1000%;
-            bottom: 0;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            padding: 10px 20px;
-            background-color: #fff;
-            // display: none;
-            // transition: .2s all;
-            img {
-                width: 32px;
-            }
+        button {
+          color: #212219;
+          font-size: 14px;
+          border: none;
+          background: transparent;
+          cursor: pointer;
+          &:hover {
+            text-decoration: underline;
+          }
         }
+      }
+    }
+    .body {
+      & > div {
+        display: flex;
+        justify-content: space-between;
+      }
     }
   }
-  .item:hover .top .extra{
-    background-color: black;
-    bottom:  0;
+  .item:hover .top .extra {
+    display: flex;
+  }
+  .item:hover .rating {
+    display: flex;
+  }
+  .price{
+    color : $gray;
+  }
+  .rating {
+    display: none;
+    gap : 4px;
+  }
+  .star-filled{
+    width: 12px;
+  }
 }
 
+@media screen and (max-width: 768px) {
+  section.new {
+    .box {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .filters {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
 }

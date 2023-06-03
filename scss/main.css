@@ -289,6 +289,7 @@ footer .box-3 a:hover {
   font-size: 18px;
   padding: 15px 25px;
   border: 1px solid #212529;
+  background-color: transparent;
   background-color: #fff;
 }
 .basket-modal .footer button:hover {
@@ -375,6 +376,11 @@ section.index-intro button:hover {
   color: #212219;
 }
 
+@media screen and (max-width: 768px) {
+  section.index-intro .box {
+    grid-template-columns: 1fr !important;
+  }
+}
 section.index-deal {
   padding: 60px 0;
   background-color: #ebf7ff;
@@ -433,12 +439,23 @@ section.index-deal button {
   font-size: 18px;
   padding: 15px 25px;
   border: 1px solid #212529;
+  background-color: transparent;
 }
 section.index-deal button:hover {
   background-color: #212529;
   color: #fff;
 }
 
+@media screen and (max-width: 768px) {
+  section.index-deal .box {
+    grid-template-columns: 1fr;
+  }
+  section.index-deal .timer {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+  }
+}
 section.new .title {
   font-size: 32px;
   margin-bottom: 8px;
@@ -486,21 +503,63 @@ section.new .item .top > img {
 section.new .item .top .extra {
   position: absolute;
   left: 0;
+  bottom: -1000%;
   bottom: 0;
   width: 100%;
-  display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 10px 20px;
-  background-color: #fff;
+  background-color: #fcfffc;
+  display: none;
 }
 section.new .item .top .extra img {
-  width: 32px;
+  width: 16px;
+  margin-left: 12px;
+  cursor: pointer;
+}
+section.new .item .top .extra img:hover {
+  transform: scale(1.2);
+}
+section.new .item .top .extra button {
+  color: #212219;
+  font-size: 14px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+section.new .item .top .extra button:hover {
+  text-decoration: underline;
+}
+section.new .item .body > div {
+  display: flex;
+  justify-content: space-between;
 }
 section.new .item:hover .top .extra {
-  background-color: black;
-  bottom: 0;
+  display: flex;
+}
+section.new .item:hover .rating {
+  display: flex;
+}
+section.new .price {
+  color: #868e96;
+}
+section.new .rating {
+  display: none;
+  gap: 4px;
+}
+section.new .star-filled {
+  width: 12px;
 }
 
+@media screen and (max-width: 768px) {
+  section.new .box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  section.new .filters {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
 section.summer {
   padding: 30px 0;
 }
@@ -527,6 +586,7 @@ section.summer button {
   font-size: 18px;
   padding: 15px 25px;
   border: 1px solid #212529;
+  background-color: transparent;
 }
 section.summer button:hover {
   background-color: #212529;
@@ -539,6 +599,11 @@ section.summer img {
   width: 200px;
 }
 
+@media screen and (max-width: 768px) {
+  section.summer img {
+    display: none;
+  }
+}
 .about-us-intro .box {
   padding: 60px 0;
   display: flex;

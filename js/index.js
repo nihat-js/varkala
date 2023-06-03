@@ -11,21 +11,21 @@ const data = [
     title: "Norwegg Chair",
     price: 30.00,
     img: "./img/index-new-2.jpg",
-    rating: "3",
+    rating: "4",
   },
   {
     id : 3,
     title: "Norwegg Chair",
     price: 92,
     img: "./img/index-new-3.jpg",
-    rating: "3",
+    rating: "5",
   },
   {
     id : 4,
     title: "Norwegg Chair",
     price: 40.00,
     img: "./img/index-new-4.jpg",
-    rating: "3",
+    rating: "4",
   },
   {
     id : 5,
@@ -46,7 +46,7 @@ const data = [
     title: "Norwegg Chair",
     price: 13.00,
     img: "./img/index-new-7.jpg",
-    rating: "3",
+    rating: "2",
   },
   {
     id : 8,
@@ -73,11 +73,18 @@ data.forEach((d) => {
   let bodyInfoDiv = document.createElement('div')
   let title = document.createElement('h3')
   let price = document.createElement('p')
-  let rating = document.createElement('p')
+  let rating = document.createElement('div')
 
+  rating.classList.add('rating')
+  for (let i=1; i<= d.rating;i++){
+    let img = document.createElement('img')
+    img.src = "./img/star-filled.svg"
+    img.classList.add('star-filled')
+    rating.append(img)
+  }
 
-  price.innerText = d.price
-  rating.innerText = d.rating
+  price.innerText = "$ " +  d.price  
+  price.classList.add('price')
 
   let heartImg = document.createElement('img')
   heartImg.src ="./img/heart.svg"
@@ -92,6 +99,7 @@ data.forEach((d) => {
   topDiv.classList.add('top')
   bodyDiv.classList.add('body')
 
+  title.innerText = d.title
 
 
   let btn = document.createElement('button')
@@ -99,6 +107,9 @@ data.forEach((d) => {
   btn.onclick =  () => updateBasket(d,1)
   btn.classList.add('btn-add')
 
+
+  extraDiv.classList.add('extra')
+  extraRightDiv.classList.add('extra-right')
 
   extraRightDiv.append(heartImg,expandImg)
   extraDiv.append(btn,extraRightDiv)
@@ -111,27 +122,6 @@ data.forEach((d) => {
 
   itemDiv.append(topDiv,bodyDiv)
 
-  let html = `
-        <div class="item">
-            <div class="top">
-                <img src="${d.img}" alt="">
-                <div class="extra">
-
-                    <div class="extra-left"> 
-                    <img src="./img/heart.svg" alt="">  
-                    <img src="./img/expand.svg" alt="">  
-                    </div>
-                </div>
-            </div>
-            <div class="body">
-                <h3 class="title"> ${d.title}  </h3>
-                <div class="body-info"> 
-                    <p class="price"> ${d.price} </p>  
-                    <p class="rating"> ${d.rating} </p>
-                </div>
-            </div>
-        </div>
-    `;
 
 
   document.querySelector("section.new .box").append(itemDiv)

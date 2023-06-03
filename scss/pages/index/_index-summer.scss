@@ -26,3 +26,11 @@ section.summer{
         width: 200px;
     }
 }
+
+@media screen and (max-width: 768px) {
+    section.summer{
+        img{
+            display: none;
+        }
+    }
+}

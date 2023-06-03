@@ -56,3 +56,17 @@ section.index-deal{
         @include btn-1();
     }
 }
+
+@media screen and (max-width: 768px) {
+    section.index-deal{
+        .box{
+            grid-template-columns: 1fr;
+        }
+        .timer{
+            display: grid;
+            width: 100%;
+            grid-template-columns: 1fr 1fr;
+
+        }
+    }
+}
