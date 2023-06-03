@@ -16,45 +16,6 @@ html {
   padding: 0 15px;
 }
 
-.dropdown {
-  position: relative;
-}
-.dropdown label {
-  display: flex;
-  gap: 5px;
-  color: #868e96;
-  opacity: 0.7;
-}
-.dropdown label:hover {
-  opacity: 1;
-}
-.dropdown a {
-  color: inherit;
-}
-.dropdown input {
-  display: none;
-}
-.dropdown .menu {
-  position: absolute;
-  display: none;
-  z-index: 2;
-  background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  left: 0;
-  top: 30px;
-}
-.dropdown .menu li {
-  padding: 10px 20px;
-  color: #868e96;
-  cursor: pointer;
-}
-.dropdown .menu li:hover {
-  color: #191919;
-}
-.dropdown input:checked + .menu {
-  display: block;
-}
-
 .header {
   display: flex;
   justify-content: space-between;
@@ -333,6 +294,45 @@ footer .box-3 a:hover {
 .basket-modal .footer button:hover {
   background-color: #212529;
   color: #fff;
+}
+
+.dropdown {
+  position: relative;
+}
+.dropdown label {
+  display: flex;
+  gap: 5px;
+  color: #868e96;
+  opacity: 0.7;
+}
+.dropdown label:hover {
+  opacity: 1;
+}
+.dropdown a {
+  color: inherit;
+}
+.dropdown input {
+  display: none;
+}
+.dropdown .menu {
+  position: absolute;
+  display: none;
+  z-index: 2;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  left: 0;
+  top: 30px;
+}
+.dropdown .menu li {
+  padding: 10px 20px;
+  color: #868e96;
+  cursor: pointer;
+}
+.dropdown .menu li:hover {
+  color: #191919;
+}
+.dropdown input:checked + .menu {
+  display: block;
 }
 
 section.index-intro {
