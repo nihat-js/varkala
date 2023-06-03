@@ -1,124 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Varkala - Contact</title>
-    <link rel="stylesheet" href="./scss/main.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="./scss/main.css" />
+  </head>
+  <body>
     <header class="header">
-        <div class="contacts">
-          <i class="fab fa-facebook-f"> </i>
-          <i class="fab fa-twitter"> </i>
-          <div class="phone">
-            <img src="./img/phone.svg" alt="" />
-            <p class="number">020-800-456-747</p>
-          </div>
+      <div class="contacts">
+        <i class="fab fa-facebook-f"> </i>
+        <i class="fab fa-twitter"> </i>
+        <div class="phone">
+          <img src="./img/phone.svg" alt="" />
+          <p class="number">020-800-456-747</p>
         </div>
-        <p>Free in-store delivery</p>
+      </div>
+      <p>Free in-store delivery</p>
+      <div class="actions">
+        <div class="dropdown">
+          <label for="lang-dropdown">
+            <p>English</p>
+          </label>
+          <input id="lang-dropdown" type="checkbox" />
+          <ul class="menu">
+            <li>German</li>
+            <li>French</li>
+          </ul>
+        </div>
+
+        <span class="horizontal-line"></span>
+
+        <div class="dropdown">
+          <label for="currency-dropdown">
+            <p>USD</p>
+          </label>
+          <input id="currency-dropdown" type="checkbox" />
+          <ul class="menu">
+            <li>EUR</li>
+            <li>GBP</li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <section class="basket-modal">
+      <div class="top">
+        <img src="./img/close.svg" alt="" onclick="hideBasket()" />
+      </div>
+      <div class="body"></div>
+      <div class="footer">
+        <div class="total">
+          <h3 class="text">Subtotal :</h3>
+          <p class="number"></p>
+        </div>
+        <button>View Cart</button>
+        <button>Checkout</button>
+      </div>
+    </section>
+
+    <nav>
+      <div class="left">
+        <h1 class="title">Varkala</h1>
+        <div class="dropdown">
+          <label for="dropdown-home">
+            <p>Home</p>
+            <img src="./img/arrow-down.svg" alt="" width="24px" />
+          </label>
+          <input id="dropdown-home" type="checkbox" />
+          <ul class="menu">
+            <li><a href="index.html"> Home </a></li>
+            <li><a href="blog.html"> Blog </a></li>
+            <li><a href="contact.html"> Contact </a></li>
+            <li><a href="about.html"> About </a></li>
+          </ul>
+        </div>
+
+        <label>
+          <p>Shop</p>
+          <img src="./img/arrow-down.svg" alt="" width="24px" />
+        </label>
+        <label>
+          <p>Icons</p>
+          <img src="./img/arrow-down.svg" alt="" width="24px" />
+        </label>
+        <label>
+          <p>Pages</p>
+          <img src="./img/arrow-down.svg" alt="" width="24px" />
+        </label>
+
+        <label>
+          <p>Docs</p>
+          <img src="./img/arrow-down.svg" alt="" width="24px" />
+        </label>
+      </div>
+
+      <div class="right">
+        <form action="">
+          <input type="search" placeholder="Search" />
+        </form>
         <div class="actions">
-          <div class="dropdown">
-            <label for="lang-dropdown">
-              <p>English</p>
-            </label>
-            <input id="lang-dropdown" type="checkbox" />
-            <ul class="menu">
-              <li>German</li>
-              <li>French</li>
-            </ul>
+          <div class="profile">
+            <img src="./img/profile.svg" alt="" />
           </div>
-  
-          <span class="horizontal-line"></span>
-  
-          <div class="dropdown">
-            <label for="currency-dropdown">
-              <p>USD</p>
-            </label>
-            <input id="currency-dropdown" type="checkbox" />
-            <ul class="menu">
-              <li>EUR</li>
-              <li>GBP</li>
-            </ul>
+          <div class="wishlist">
+            <img src="./img/heart.svg" alt="" />
+            <p class="number"></p>
+          </div>
+          <div class="basket">
+            <img src="./img/basket.svg" alt="" onclick="showBasket()" />
+            <p class="number"></p>
+          </div>
+          <div class="about">
+            <img src="./img/hamburger.svg" alt="" />
           </div>
         </div>
-      </header>
-  
-      <section class="basket-modal">
-        <div class="top">
-          <img src="./img/close.svg" alt="" onclick="hideBasket()" />
+      </div>
+    </nav>
+
+    <section class="contact-intro">
+      <p class="subtitle">Home Contact</p>
+      <h2 class="title">Contact</h2>
+    </section>
+
+
+    <section class="contact-info">
+      <div class="container">
+        <div class="address">
+          <h3 class="title">Address</h3>
+          <p>13/25 New Avenue</p>
+          <p>New Heaven, 45Y 73J</p>
+          <p>England, Great Britain</p>
         </div>
-        <div class="body"></div>
-        <div class="footer">
-          <div class="total">
-            <h3 class="text"> Subtotal :  </h3>
-            <p class="number">  </p>
-          </div>
-          <button> View Cart </button>
-          <button> Checkout </button>
+        <div class="call">
+          <h3 class="title">Call center</h3>
+          <p>
+            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <p>+33 555 444 333</p>
         </div>
-      </section>
-  
-      <nav>
-        <div class="left">
-          <h1 class="title">Varkala</h1>
-          <div class="dropdown">
-            <label for="dropdown-home">
-              <p>Home</p>
-              <img src="./img/arrow-down.svg" alt="" width="24px" />
-            </label>
-            <input id="dropdown-home" type="checkbox" />
-            <ul class="menu">
-              <li><a href="index.html"> Home </a></li>
-              <li><a href="blog.html"> Blog </a></li>
-              <li><a href="contact.html"> Contact </a></li>
-              <li><a href="about.html"> About </a></li>
-            </ul>
-          </div>
-  
-          <label>
-            <p>Shop</p>
-            <img src="./img/arrow-down.svg" alt="" width="24px" />
-          </label>
-          <label>
-            <p>Icons</p>
-            <img src="./img/arrow-down.svg" alt="" width="24px" />
-          </label>
-          <label>
-            <p>Pages</p>
-            <img src="./img/arrow-down.svg" alt="" width="24px" />
-          </label>
-  
-          <label>
-            <p>Docs</p>
-            <img src="./img/arrow-down.svg" alt="" width="24px" />
-          </label>
+        <div class="electronic">
+          <h3 class="title">Electronic Support</h3>
+          <p>
+            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <p>info@varkala.com</p>
+          <p>support@varkala.com</p>
         </div>
-  
-        <div class="right">
-          <form action="">
-            <input type="search" placeholder="Search" />
-          </form>
-          <div class="actions">
-            <div class="profile">
-              <img src="./img/profile.svg" alt="" />
-            </div>
-            <div class="wishlist">
-              <img src="./img/heart.svg" alt="" />
-              <p class="number"></p>
-            </div>
-            <div class="basket">
-              <img src="./img/basket.svg" alt="" onclick="showBasket()" />
-              <p class="number"></p>
-            </div>
-            <div class="about">
-              <img src="./img/hamburger.svg" alt="" />
-            </div>
-          </div>
-        </div>
-      </nav>
+      </div>
+    </section>
 
     <!-- <section class="get-in-touch">
         <div class="container">
@@ -139,11 +170,6 @@
             </div>
         </div>
     </section> -->
-
-    <section class="contact-intro">
-      <p class="subtitle"> Home        Contact </p>
-      <h2 class="title"> Contact </h2>
-    </section>
 
 
     <footer>
@@ -235,6 +261,5 @@
         </ul>
       </div>
     </footer>
-
-</body>
+  </body>
 </html>
