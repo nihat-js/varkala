@@ -12,7 +12,13 @@
     display: flex;
     justify-content: flex-end;
     img {
-      width: 24px;
+      border-radius: 50%;
+      width: 30px;
+      padding: 6px;
+      cursor: pointer;
+      &:hover{
+        background-color: #f5f7f9;
+      }
     }
   }
   .body {

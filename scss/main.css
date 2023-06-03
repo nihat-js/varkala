@@ -152,6 +152,9 @@ nav .right .actions img {
     display: none;
   }
 }
+footer {
+  padding: 0 10px;
+}
 footer .box-1 {
   padding: 80px 0;
   width: 100%;
@@ -277,7 +280,13 @@ footer .box-3 a:hover {
   justify-content: flex-end;
 }
 .basket-modal .top img {
-  width: 24px;
+  border-radius: 50%;
+  width: 30px;
+  padding: 6px;
+  cursor: pointer;
+}
+.basket-modal .top img:hover {
+  background-color: #f5f7f9;
 }
 .basket-modal .body {
   margin-top: 30px;
@@ -618,9 +627,14 @@ section.about-sponsors .logos {
   justify-content: space-between;
 }
 section.about-sponsors img {
-  width: 100px;
+  max-width: 100px;
 }
 
+@media screen and (max-width: 768px) {
+  section.about-sponsors img {
+    width: 80px;
+  }
+}
 section.about-team {
   padding: 50px 0;
 }
@@ -668,6 +682,19 @@ section.about-team .text {
   margin-bottom: 40px;
 }
 
+@media screen and (max-width: 768px) {
+  section.about-team .container {
+    grid-template-columns: 1fr;
+  }
+  section.about-team .container .left {
+    display: none;
+  }
+  section.about-team .box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
 section.blog-intro {
   background-image: url("../img/blog-intro.jpg");
   height: 600px;

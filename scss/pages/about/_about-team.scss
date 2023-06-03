@@ -45,3 +45,19 @@ section.about-team{
         margin-bottom: 40px;
     }
 }
+
+@media screen and (max-width:768px) {
+    section.about-team {
+        .container{
+            .left{
+                display: none;
+            }
+            grid-template-columns: 1fr;
+        }
+        .box{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap :30px;
+        }
+    }
+}

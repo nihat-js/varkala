@@ -8,6 +8,14 @@ section.about-sponsors{
         justify-content: space-between;
     }
     img{
-        width: 100px;
+        max-width: 100px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    section.about-sponsors{
+        img {
+            width: 80px;
+        }
     }
 }
