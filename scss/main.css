@@ -49,6 +49,18 @@ html {
 .dropdown {
   position: relative;
 }
+.dropdown label {
+  display: flex;
+  gap: 5px;
+  color: #868e96;
+  opacity: 0.7;
+}
+.dropdown label:hover {
+  opacity: 1;
+}
+.dropdown a {
+  color: inherit;
+}
 .dropdown input {
   display: none;
 }
@@ -135,145 +147,37 @@ html {
   order: 2;
 }
 
-section.new .title {
-  font-size: 32px;
-  margin-bottom: 8px;
-}
-section.new .text {
-  font-size: 20px;
-  margin-bottom: 48px;
-  color: #868e96;
-}
-section.new .filters {
+nav {
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 60px;
 }
-section.new .filters .left {
-  color: #868e96;
+nav .left {
   display: flex;
   gap: 20px;
-  font-weight: bold;
-  cursor: pointer;
-}
-section.new .filters .left p:hover {
-  color: #212219;
-  text-decoration: underline;
-}
-section.new .filters .left .active {
-  color: #212219;
-}
-section.new .filters .right {
-  color: #bcac76;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-section.new .box {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
-}
-section.new .item .top {
-  position: relative;
-}
-section.new .item .top > img {
-  width: 100%;
-}
-section.new .item .top .extra {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 20px;
-  background-color: #fff;
-  display: none;
-}
-section.new .item .top .extra img {
-  width: 32px;
-}
-section.new .item:hover .top .extra {
-  background-color: black;
-  bottom: 0;
-}
-
-section.summer {
-  padding: 30px 0;
-}
-section.summer .container {
-  padding: 60px 0;
-  background-color: #eae0bd;
-  position: relative;
-  display: flex;
-  flex-direction: column;
   align-items: center;
 }
-section.summer .title {
-  font-size: 72px;
-  margin-bottom: 16px;
+nav .left label {
+  display: flex;
+  opacity: 0.7;
 }
-section.summer .subtitle {
-  font-size: 32px;
-  margin-bottom: 48px;
+nav .left label:hover {
+  opacity: 1;
 }
-section.summer button {
-  border: 1px solid #212529;
-  color: #212529;
-  font-weight: light;
-  font-size: 18px;
-  padding: 15px 25px;
-  border: 1px solid #212529;
+nav .right form input {
+  border: none;
+  padding: 10px 40px 10px 10px;
+  border-bottom: 2px solid #212219;
+  opacity: 0.7;
+  background: url("../../img/search.svg");
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  outline: none;
+  font-size: 16px;
 }
-section.summer button:hover {
-  background-color: #212529;
-  color: #fff;
-}
-section.summer img {
-  position: absolute;
-  top: -100px;
-  right: 0;
-  width: 200px;
-}
-
-section.index-intro {
-  color: #212219;
-}
-section.index-intro .subtitle {
-  margin-bottom: 8px;
-  letter-spacing: 1px;
-}
-section.index-intro .title {
-  font-size: 64px;
-  margin-bottom: 24px;
-}
-section.index-intro .text {
-  color: #868e96;
-  margin-bottom: 48px;
-  letter-spacing: 1px;
-}
-section.index-intro .box {
-  display: grid;
-  grid-template-columns: 7fr 5fr;
-  align-items: center;
-  gap: 60px;
-}
-section.index-intro .chair {
-  height: 400px;
-}
-section.index-intro button {
-  background-color: transparent;
-  border: 1px solid #bcac76;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  padding: 10px 15px;
-  font-weight: bold;
-  background-color: transparent;
-  color: #bcac76;
-}
-section.index-intro button:hover {
-  background-color: #bcac76;
-  color: #212219;
+nav .right form input:focus {
+  opacity: 1;
 }
 
 footer .box-1 {
@@ -385,80 +289,208 @@ footer .box-3 a:hover {
     justify-content: center;
   }
 }
-section.about-at {
-  padding: 60px 0;
+section.index-intro {
+  color: #212219;
 }
-section.about-at .title {
-  text-align: center;
-  font-size: 32px;
-  margin-bottom: 60px;
+section.index-intro .subtitle {
+  margin-bottom: 8px;
+  letter-spacing: 1px;
 }
-section.about-at article {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
+section.index-intro .title {
+  font-size: 64px;
+  margin-bottom: 24px;
 }
-section.about-at article p {
+section.index-intro .text {
   color: #868e96;
+  margin-bottom: 48px;
+  letter-spacing: 1px;
 }
-
-section.about-sponsors {
-  padding: 60px 0;
-  background-color: #f8f9fa;
-}
-section.about-sponsors .logos {
-  display: flex;
-  justify-content: space-between;
-}
-section.about-sponsors img {
-  width: 100px;
-}
-
-section.about-team {
-  padding: 50px 0;
-}
-section.about-team .line {
-  width: 100%;
-  height: 2px;
-  background-color: #868e96;
-  margin-top: 15px;
-}
-section.about-team .container {
+section.index-intro .box {
   display: grid;
-  grid-template-columns: 2fr 10fr;
-  gap: 50px;
+  grid-template-columns: 7fr 5fr;
+  align-items: center;
+  gap: 60px;
 }
-section.about-team .box {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 50px;
+section.index-intro .chair {
+  height: 400px;
 }
-section.about-team img {
-  width: 100%;
-  border-radius: 50%;
-}
-section.about-team .name {
-  margin-bottom: 4px;
-  text-align: center;
-}
-section.about-team .position {
-  color: #868e96;
-  font-size: 14px;
-  text-align: center;
-}
-section.about-team .subtitle {
-  color: #bcac76;
+section.index-intro button {
+  background-color: transparent;
+  border: 1px solid #bcac76;
   letter-spacing: 1px;
   text-transform: uppercase;
+  padding: 10px 15px;
+  font-weight: bold;
+  background-color: transparent;
+  color: #bcac76;
+}
+section.index-intro button:hover {
+  background-color: #bcac76;
+  color: #212219;
+}
+
+section.index-deal {
+  padding: 60px 0;
+  background-color: #ebf7ff;
+}
+section.index-deal .subtitle {
+  color: #dc3545;
   margin-bottom: 16px;
 }
-section.about-team .title {
-  font-size: 70px;
-  margin-bottom: 16px;
+section.index-deal .title {
+  font-size: 64px;
+  font-weight: bold;
 }
-section.about-team .text {
+section.index-deal .price {
   color: #868e96;
-  margin-bottom: 40px;
+}
+section.index-deal .off {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #212529;
+  text-align: left;
+  box-sizing: border-box;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+section.index-deal .box {
+  display: grid;
+  grid-template-columns: 8fr 4fr;
+  gap: 30px;
+}
+section.index-deal img {
+  height: 400px;
+}
+section.index-deal .timer {
+  background-color: #fff;
+  padding: 20px 50px;
+  display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 50px;
+}
+section.index-deal .timer > div .number {
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+section.index-deal .timer > div .text {
+  color: #868e96;
+}
+section.index-deal button {
+  margin-top: 25px;
+  background-color: transparent;
+  border: 1px solid #212529;
+  color: #212529;
+  font-weight: light;
+  font-size: 18px;
+  padding: 15px 25px;
+  border: 1px solid #212529;
+}
+section.index-deal button:hover {
+  background-color: #212529;
+  color: #fff;
+}
+
+section.new .title {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+section.new .text {
+  font-size: 20px;
+  margin-bottom: 48px;
+  color: #868e96;
+}
+section.new .filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+section.new .filters .left {
+  color: #868e96;
+  display: flex;
+  gap: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+section.new .filters .left p:hover {
+  color: #212219;
+  text-decoration: underline;
+}
+section.new .filters .left .active {
+  color: #212219;
+}
+section.new .filters .right {
+  color: #bcac76;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+section.new .box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+section.new .item .top {
+  position: relative;
+}
+section.new .item .top > img {
+  width: 100%;
+}
+section.new .item .top .extra {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #fff;
+}
+section.new .item .top .extra img {
+  width: 32px;
+}
+section.new .item:hover .top .extra {
+  background-color: black;
+  bottom: 0;
+}
+
+section.summer {
+  padding: 30px 0;
+}
+section.summer .container {
+  padding: 60px 0;
+  background-color: #eae0bd;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section.summer .title {
+  font-size: 72px;
+  margin-bottom: 16px;
+}
+section.summer .subtitle {
+  font-size: 32px;
+  margin-bottom: 48px;
+}
+section.summer button {
+  border: 1px solid #212529;
+  color: #212529;
+  font-weight: light;
+  font-size: 18px;
+  padding: 15px 25px;
+  border: 1px solid #212529;
+}
+section.summer button:hover {
+  background-color: #212529;
+  color: #fff;
+}
+section.summer img {
+  position: absolute;
+  top: -100px;
+  right: 0;
+  width: 200px;
 }
 
 section.blog-intro {

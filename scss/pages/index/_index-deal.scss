@@ -1,3 +1,58 @@
 section.index-deal{
-    
+    padding: 60px 0;
+    background-color: #ebf7ff;
+    .subtitle{
+        color : #dc3545;
+        margin-bottom: 16px;
+    }  
+    .title{
+        font-size: 64px;
+        font-weight: bold;
+    }
+    .price{
+        color : $gray;
+
+    }
+    .off {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.6;
+        color: #212529;
+        text-align: left;
+        box-sizing: border-box;
+        margin-top: 0;
+        margin-bottom: 1.5rem ;
+    }
+    .box {
+        display: grid;
+        grid-template-columns: 8fr 4fr;
+        gap : 30px;
+    }
+    img {
+        height: 400px;
+    }
+    .timer{
+        background-color: #fff;
+        padding: 20px 50px ;
+        display: flex;
+        width: fit-content;
+
+        gap : 50px;
+        & > div{
+            .number {
+                font-weight: bold;
+                font-size: 24px;
+                margin-bottom: 8px;
+            }
+            .text{
+                color : $gray;
+            }
+        }
+    }
+
+    button {
+        margin-top: 25px;
+        background-color: transparent;
+        @include btn-1();
+    }
 }

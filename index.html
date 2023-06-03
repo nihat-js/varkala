@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./scss/main.css">
+    <link rel="stylesheet" href="./scss/main.css" />
     <script src="./js/index.js" defer></script>
+    <script src="./js/app.js"></script>
   </head>
   <body>
-
     <header class="header">
       <div class="contacts">
         <i class="fab fa-facebook-f"> </i>
@@ -51,19 +51,41 @@
       <div class="left">
         <h1 class="title">Varkala</h1>
         <div class="dropdown">
-          <button>Home</button>
+          <label for="dropdown-home">
+            <p>Home</p>
+            <img src="./img/arrow-down.svg" alt="" width="24px" />
+          </label>
+          <input id="dropdown-home" type="checkbox" />
           <ul class="menu">
-            <li>Home 1 - Fashion</li>
-            <li>Home 2 - Fashion</li>
-            <li>Home 3 - Design</li>
-            <li>Home 4 - Design</li>
+            <li><a href="home.html"> Home </a></li>
+            <li><a href="blog.html"> Blog </a></li>
+            <li><a href="contact.html"> Contact </a></li>
           </ul>
         </div>
+
+        <label>
+          <p>Shop</p>
+          <img src="./img/arrow-down.svg" alt="" width="24px" />
+        </label>
+        <label>
+          <p>Icons</p>
+          <img src="./img/arrow-down.svg" alt="" width="24px" />
+        </label>
+        <label>
+          <p>Pages</p>
+          <img src="./img/arrow-down.svg" alt="" width="24px" />
+        </label>
+
+        <label >
+          <p>Docs</p>
+          <img src="./img/arrow-down.svg" alt="" width="24px" />
+        </label>
+
       </div>
+
       <div class="right">
         <form action="">
-          <input type="search" />
-          <img src="" alt="" />
+          <input type="search" placeholder="Search" />
         </form>
         <div class="actions">
           <div class="profile">
@@ -84,33 +106,55 @@
       </div>
     </nav>
 
-
     <section class="index-intro">
       <div class="container">
         <div class="box">
           <div class="left">
-            <p class="subtitle"> Our All Time Favourites </p>
-            <h3 class="title"> Black & White </h3>
-            <p class="text"> The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pit </p>
-            <button> Discover More </button>
+            <p class="subtitle">Our All Time Favourites</p>
+            <h3 class="title">Black & White</h3>
+            <p class="text">
+              The bedding was hardly able to cover it and seemed ready to slide
+              off any moment. His many legs, pit
+            </p>
+            <button>Discover More</button>
           </div>
           <div class="right">
-            <img class="chair" src="./img/index-intro-chair.png" alt="">
+            <img class="chair" src="./img/index-intro-chair.png" alt="" />
           </div>
         </div>
       </div>
     </section>
 
-    <section class="deal">
-      <div class="container">
-        <h3 class="sbutitle">DEAL OF THE WEEK</h3>
-        <h2 class="title">Black and white Nordegg chairs</h2>
-        <p class="price"> $129.00  $79.00 </p>
-        <p class="off"> 50% off </p>
-        <div class="timer">
-
+    <section class="index-deal">
+      <div class="container box">
+        <div class="left">
+          <h3 class="subtitle">DEAL OF THE WEEK</h3>
+          <h2 class="title">Black and white Nordegg chairs</h2>
+          <p class="price">$129.00 $79.00</p>
+          <p class="off">50% off</p>
+          <div class="timer">
+            <div class="days">
+              <div class="number">15</div>
+              <div class="text">days</div>
+            </div>
+            <div class="hours">
+              <div class="number">23</div>
+              <div class="text">hours</div>
+            </div>
+            <div class="minutes">
+              <div class="number">00</div>
+              <div class="text">minutes</div>
+            </div>
+            <div class="seconds">
+              <div class="number">15</div>
+              <div class="text">seconds</div>
+            </div>
+          </div>
+          <button>Shop Now</button>
         </div>
-        <button> Shop Now </button>
+        <div class="right">
+          <img src="./img/index-intro-chair.png" alt="" />
+        </div>
       </div>
     </section>
 
@@ -133,9 +177,7 @@
           </div>
           <p class="right">All Produts</p>
         </div>
-        <div class="box">
-          
-        </div>
+        <div class="box"></div>
       </div>
     </section>
 
@@ -144,7 +186,7 @@
         <h3 class="title">Summer Sales</h3>
         <p class="subtitle">Our biggest sales this year — up to 60% off!</p>
         <button>Start Shopping</button>
-        <img src="./img/index-summer-chair.png" alt="">
+        <img src="./img/index-summer-chair.png" alt="" />
       </div>
     </section>
 
