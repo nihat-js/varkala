@@ -72,22 +72,7 @@ function showBasket(){
     rightDiv.append(removeFromImg)
 
     itemDiv.append(leftDiv,middleDiv,rightDiv)
-    
-    // let html = `
-    //   <div class='item'>
-    //     <div class="left">
-    //     <img src="${b.img}" />
-    //     </div>
-    //     <div class="middle">
-    //       <h3 class="title">${b.title}</h3>
-    //       <p class="quantity"> Quantity :   ${b.count} </p>
-    //       <p class="general-price"> ${b.count} * ${b.price} </p>
-    //     </div>
-    //     <div class="right">
-    //       <img src="./img/close.svg" onclick=${showBasket('id')}  /> 
-    //     </div>
-    //   </div>
-    // `
+
     document.querySelector('.basket-modal .body').append(itemDiv) 
     
   })

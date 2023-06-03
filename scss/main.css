@@ -695,6 +695,35 @@ section.about-team .text {
     gap: 30px;
   }
 }
+section.about-milestones {
+  padding: 50px 0;
+  background-color: #f8f9fa;
+}
+section.about-milestones .box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+section.about-milestones .right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+section.about-milestones .title {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+section.about-milestones .text {
+  color: #868e96;
+  letter-spacing: 1px;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+  section.about-milestones .box {
+    grid-template-columns: 1fr;
+  }
+}
 section.blog-intro {
   background-image: url("../img/blog-intro.jpg");
   height: 600px;
